@@ -10,7 +10,20 @@ import { Location } from '@angular/common';
   styleUrls: ['./add-stage.component.css']
 })
 export class AddStageComponent implements OnInit {
-  stage : Stage = {id_stage:0,titre:"",date_debut:new Date(),date_fin:new Date(),encadrant:null,societe:0};
+  stage : Stage = {id_stage:0,titre:"",date_debut:new Date(),date_fin:new Date(),domaine:"",
+  encadrant:{id :0,
+    nom:"",
+    prenom:"",
+    email:"",
+    tel:0,
+    post:"",
+    societe:{ rais_soc:0,
+      adresse:"",
+      libelle:"",
+      domaine:"",
+      type:"",}
+    }
+  };
   constructor(private stageService : StageService,private location:Location) { }
 
   ngOnInit(): void {

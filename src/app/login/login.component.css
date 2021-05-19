@@ -9,11 +9,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, #f8bbd0, #ae9ed3)
+    background: linear-gradient(to right, #e9e0e3, #ae9ed3)
 }
 
 .ce{
-    color: #ffcc00;
+    color: #f3e094;
 }
 
 .card {
@@ -27,7 +27,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    background: #512645;
+    background: #6d358d;
     ;
     text-align: center;
     transition: 0.25s;

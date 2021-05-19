@@ -28,7 +28,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="flex-row d-flex  ">
-      <a class="navbar-brand  mb-1 alpha21" href="#">Brand</a>
+      <a class="navbar-brand  mb-1 alpha21" routerLink="/dashboard">Espace Admin</a>
       <button type="button" class="hidden-md-up navbar-toggler" data-toggle="offcanvas" title="Toggle responsive left sidebar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,15 +39,13 @@
           <a class="nav-link " href="#">Home <span class="sr-only ">Home</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" routerLink="/stages">Stages</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#myAlert" data-toggle="collapse">Wow</a>
-        </li>
+        
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">About</a>
+          <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">Exit</a>
         </li>
       </ul>
     </div>
@@ -56,60 +54,56 @@
     <div class="row row-offcanvas row-offcanvas-left ">
       <div class="col-md-3 col-lg-2 sidebar-offcanvas  " id="sidebar" role="navigation">
         <ul class="nav flex-column pl-1 ">
-          <li class="nav-item "><a class="nav-link" href="#"><div class="alpha20">Overview</div></a></li>
+          <li class="nav-item "><a class="nav-link" href="#"><div class="alpha20">Statistiques</div></a></li>
           
           <li class="nav-item"><a class="nav-link" href="#">
-          <div class="alpha20">Analytics</div></a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><div class="alpha20">Export</div></a></li>
-          <li class="nav-item"><a class="nav-link" href=""><div class="alpha20">Nav item</div></a></li>
-          <li class="nav-item"><a class="nav-link" href=""><div class="alpha20">Nav item</div></a></li>
-          <li class="nav-item"><a class="nav-link" href=""><div class="alpha20">Another</div></a></li>
-          <li class="nav-item"><a class="nav-link" href=""><div class="alpha20">Nav item</div></a></li>
-          <li class="nav-item"><a class="nav-link" href=""><div class="alpha20">One more</div></a></li>
+          <div class="alpha20">Analyses</div></a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/dashboard"><div class="alpha20">Taches</div></a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/addStage"><div class="alpha20">Formulaire</div></a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/dashboard"><div class="alpha20">contacts</div></a></li>
+         
         </ul>
       </div>
       <!--/col-->
 
       <div class="col-md-9 col-lg-10 main">
 
-        toggle sidebar button
             <p class="hidden-md-up">
                 <button type="button" class="btn btn-primary-outline btn-sm" data-toggle="offcanvas"><i class="fa fa-chevron-left"></i> Menu</button>
             </p>
 
         <h1 class="display-2 hidden-xs-down">
-            Bootstrap 4 Dashboard
-            </h1>
-        <p class="lead hidden-xs-down">(with off-canvas sidebar, based on BS v4 alpha 6)</p>
+ Dashboard        
+     </h1>
+        <p class="lead hidden-xs-down"></p>
 
         <div class="alert alert-warning fade collapse" role="alert" id="myAlert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">×</span>
                     <span class="sr-only">Close</span>
                 </button>
-          <strong>Holy guacamole!</strong> It's free.. this is an example theme.
+          
         </div>
 
         <div class="row mb-3">
           <div class="col-xl-3 col-lg-6">
-            <div class="card card-inverse alpha" routerLink="/stage">
+            <div class="card card-inverse alpha" routerLink="/stages">
               <div class="card-block alpha ">
                 <div class="rotate">
                   <i class="fa fa-user fa-5x " ></i>
                 </div>
-                <h6 class="text-uppercase " 
-  >Stages</h6>
-                <h1 class="display-1" >134</h1>
+                <h6 class="text-uppercase " >Stages</h6>
+                <h1 class="display-1" >{{nbStage}}</h1>
               </div>
             </div>
           </div>
           <div class="col-xl-3 col-lg-6">
-            <div class="card card-inverse alpha1">
+            <div class="card card-inverse alpha1" routerLink="/societes">
               <div class="card-block alpha1">
                 <div class="rotate">
                   <i class="fa fa-list fa-4x"></i>
                 </div>
-                <h6 class="text-uppercase">Posts</h6>
+                <h6 class="text-uppercase" >Societes</h6>
                 <h1 class="display-1">87</h1>
               </div>
             </div>
@@ -120,7 +114,7 @@
                 <div class="rotate">
                   <i class="fa fa-twitter fa-5x"></i>
                 </div>
-                <h6 class="text-uppercase">Tweets</h6>
+                <h6 class="text-uppercase">Encadrants</h6>
                 <h1 class="display-1">125</h1>
               </div>
             </div>
@@ -131,7 +125,7 @@
                 <div class="rotate">
                   <i class="fa fa-share fa-5x"></i>
                 </div>
-                <h6 class="text-uppercase">Shares</h6>
+                <h6 class="text-uppercase">Domaines</h6>
                 <h1 class="display-1">36</h1>
               </div>
             </div>
@@ -142,9 +136,8 @@
         
         <a id="features"></a>
         <hr>
-        <p class="lead">
-          Are you ready for Bootstap 4? It's the 4th generation of this popular responsive framework. Bootstrap 4 will include some interesting new features such as 5 grid sizes (now including xl), cards, em sizing, CSS normalization (reboot) and larger font
-          sizes.
+        <p class="lead" class="h5">
+      Découverte Des Differents Entreprises et Domaines !
         </p>
 
         <hr>
@@ -153,104 +146,29 @@
             <div class="card">
               <img class="card-img-top img-responsive" src="//placehold.it/740x180/bbb/fff?text=..." alt="Card image cap">
               <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Button</a>
+                <h4 class="card-title">Nouveautés</h4>
+                <p class="card-text"> Nous vous tiendrons bien entendu au courant </p>
+                <a href="#" class="btn btn-primary" routerLink="/dashboard">consultez</a>
               </div>
             </div>
 
             <div class="card card-inverse bg-inverse mt-3">
               <div class="card-block">
-                <h3 class="card-title">Dark background</h3>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-outline-secondary">Outline</a>
+                <h3 class="card-title">consultez nos offres</h3>
+                <p class="card-text">Accédez aux differents Sites des Entreprises</p>
+                <a href="#" class="btn btn-outline-secondary" routerLink="/dashboard">click ici !</a>
               </div>
             </div>
 
           </div>
+
           <div class="col-lg-9 col-md-8">
             <div class="table-responsive">
-              <table class="table table-striped">
-                <thead class="thead-inverse">
-                  <tr>
-                    <th>#</th>
-                    <th>Label</th>
-                    <th>Header</th>
-                    <th>Column</th>
-                    <th>Data</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1,001</td>
-                    <td>responsive</td>
-                    <td>bootstrap</td>
-                    <td>cards</td>
-                    <td>grid</td>
-                  </tr>
-                  <tr>
-                    <td>1,002</td>
-                    <td>rwd</td>
-                    <td>web designers</td>
-                    <td>theme</td>
-                    <td>responsive</td>
-                  </tr>
-                  <tr>
-                    <td>1,003</td>
-                    <td>free</td>
-                    <td>open-source</td>
-                    <td>download</td>
-                    <td>template</td>
-                  </tr>
-                  <tr>
-                    <td>1,003</td>
-                    <td>frontend</td>
-                    <td>developer</td>
-                    <td>coding</td>
-                    <td>card panel</td>
-                  </tr>
-                  <tr>
-                    <td>1,004</td>
-                    <td>migration</td>
-                    <td>bootstrap 4</td>
-                    <td>mobile-first</td>
-                    <td>design</td>
-                  </tr>
-                  <tr>
-                    <td>1,005</td>
-                    <td>navbar</td>
-                    <td>sticky</td>
-                    <td>jumbtron</td>
-                    <td>header</td>
-                  </tr>
-                  <tr>
-                    <td>1,006</td>
-                    <td>collapse</td>
-                    <td>affix</td>
-                    <td>submenu</td>
-                    <td>footer</td>
-                  </tr>
-                  <tr>
-                    <td>1,007</td>
-                    <td>layout</td>
-                    <td>examples</td>
-                    <td>themes</td>
-                    <td>grid</td>
-                  </tr>
-                  <tr>
-                    <td>1,008</td>
-                    <td>migration</td>
-                    <td>bootstrap 4</td>
-                    <td>flexbox</td>
-                    <td>design</td>
-                  </tr>
-                </tbody>
-              </table>
+         <app-societe></app-societe>
             </div>
           </div>
         </div>
         
-
        </div>
     </div>
 
@@ -276,14 +194,13 @@
       </div>
     </div>
   </div>
-  
   <footer class="footer">
     <div class="container">
         <div class="row">             
             <div  class="col-4 offset-1 col-sm-2 alpha20"> 
                 <h5>Links</h5>
                 <ul class="list-unstyled alpha20" >
-                    <li ><a href="#"><div class="alpha21">Home</div></a></li>
+                    <li ><a href="#"><div class="alpha21">Dashboard</div></a></li>
                     <li><a href="#"><div class="alpha21">About</div></a></li>
                     <li><a href="#"><div class="alpha21">Menu</div></a></li>
                     <li><a href="#"><div class="alpha21">Contact</div></a></li>
@@ -293,13 +210,13 @@
   
                 <h5><div class="alpha20">Our Address</div></h5>
                 <address>
-              121, Clear Water Bay Road<br>
-              Clear Water Bay, Kowloon<br>
-              HONG KONG<br>
-              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-                  <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+              ENICARTHAGE<br>
+              Charguia 2<br>
+              Ariana<br>
+              <i class="fa fa-phone fa-lg"></i>: +216 52 62056884<br>
+                  <i class="fa fa-fax fa-lg"></i>: +216 123445666<br>
                   <i class="fa fa-envelope fa-lg"></i>: 
-                  <a href="mailto:confusion@food.net">confusion@food.net</a>
+                  <a href="mailto:confusion@food.net">rchebbi@gmail.com</a>
            </address>
             </div>
             <div class="col-12 col-sm-4 align-self-center">
@@ -319,7 +236,9 @@
             </div>
        </div>
     </div>
-</footer>
+</footer>    
+  
+
 
   <script>
     // sandbox disable popups

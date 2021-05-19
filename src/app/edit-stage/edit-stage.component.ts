@@ -9,7 +9,20 @@ import { Stage } from '../stage';
   styleUrls: ['./edit-stage.component.css']
 })
 export class EditStageComponent implements OnInit {
-  stage : Stage = {id_stage:0,titre:"",date_debut:new Date(),date_fin:new Date(),encadrant:null,societe:0};
+  stage : Stage = {id_stage:0,titre:"",date_debut:new Date(),date_fin:new Date(),domaine:"",
+  encadrant:{id :0,
+    nom:"",
+    prenom:"",
+    email:"",
+    tel:0,
+    post:"",
+    societe:{ rais_soc:0,
+      adresse:"",
+      libelle:"",
+      domaine:"",
+      type:"",}
+    }
+  };
 
   constructor( private route :ActivatedRoute,
     private stageService:StageService,

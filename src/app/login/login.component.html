@@ -9,6 +9,7 @@
                         <input type="text" name="email" [(ngModel)]="admin.email" placeholder="E-mail"> 
                         <input type="password" name="password" [(ngModel)]="admin.password"placeholder="Password"> 
                         <a class="cc" href="#">Forgot password?</a> 
+                        <p style="color: red;">{{msgErreur}}</p>
                         <input type="submit" name="submit" value="Login"> 
                     </form>
                 </div>

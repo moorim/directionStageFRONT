@@ -44,7 +44,7 @@
                    <a  id="add" routerLink="/addStage" data-toggle="tooltip" data-placement="bottom" title="Ajouter formateur">
                         add
                    </a>
-                   <a id="home">
+                   <a id="home" routerLink="/dashboard">
                       home
                    </a>
               </div>
@@ -61,7 +61,7 @@
                      <th scope="col">Titre</th>
                      <th scope="col">Date de debut</th>
                      <th scope="col">Date de fin</th>
-                     <th scope="col">Entreprise</th>
+                     <th scope="col">Domaine</th>
                    </tr>
               </thead>
               <tbody class="stages">
@@ -69,7 +69,7 @@
                         <td><a id="nom" routerLink="/detailformateur/{{stg.id_stage}}">{{stg.titre}} </a></td>
                         <td> {{stg.date_debut}}</td>
                         <td>{{stg.date_fin}}</td>
-                        <td>{{stg.societe}}</td> 
+                        <td>{{stg.domaine}}</td> 
                         <td> <a routerLink='/editStage/{{stg.id_stage}}'> Edit</a></td>
                         <td><a (click)="delete(stg)">Delete</a></td>
                       </tr> 
@@ -81,45 +81,46 @@
     </div>
 </div>
 <footer class="footer">
-     <div class="container">
-         <div class="row">             
-             <div  class="col-4 offset-1 col-sm-2 alpha20"> 
-                 <h5>Links</h5>
-                 <ul class="list-unstyled alpha20" >
-                     <li ><a href="#"><div class="alpha21">Home</div></a></li>
-                     <li><a href="#"><div class="alpha21">About</div></a></li>
-                     <li><a href="#"><div class="alpha21">Menu</div></a></li>
-                     <li><a href="#"><div class="alpha21">Contact</div></a></li>
-                 </ul>
-             </div>
-             <div  class="col-7 col-sm-5"> 
    
-                 <h5><div class="alpha20">Our Address</div></h5>
-                 <address>
-               121, Clear Water Bay Road<br>
-               Clear Water Bay, Kowloon<br>
-               HONG KONG<br>
-               <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-                   <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-                   <i class="fa fa-envelope fa-lg"></i>: 
-                   <a href="mailto:confusion@food.net">confusion@food.net</a>
-            </address>
-             </div>
-             <div class="col-12 col-sm-4 align-self-center">
-                 <div class="text-center">
-                     <a class="btn btn-social-icon btn-google alpha21" href="http://google.com/+"><i class="fa fa-google-plus ga-lg"></i></a>
-                     <a class="btn btn-social-icon btn-facebook alpha21" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
-                     <a class="btn btn-social-icon btn-linkedin alpha21 "href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
-                     <a class="btn btn-social-icon btn-twitter alpha21" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-                     <a class="btn btn-social-icon btn-youtube alpha21" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
-                     <a class="btn btn-social-icon alpha21 " href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
-                 </div>
-             </div>
-        </div>
-        <div class="row justify-content-center">             
-             <div class="col-auto alpha21">
-                 <p>© Copyright 2021 </p>
-             </div>
-        </div>
-     </div>
- </footer>
+        <div class="row">             
+            <div  class="col-4 offset-1 col-sm-2 alpha20"> 
+                <h5>Links</h5>
+                <ul class="list-unstyled alpha20" >
+                    <li ><a href="#"><div class="alpha21">Dashboard</div></a></li>
+                    <li><a href="#"><div class="alpha21">About</div></a></li>
+                    <li><a href="#"><div class="alpha21">Menu</div></a></li>
+                    <li><a href="#"><div class="alpha21">Contact</div></a></li>
+                </ul>
+            </div>
+            <div  class="col-7 col-sm-5"> 
+  
+                <h5><div class="alpha20">Our Address</div></h5>
+                <address>
+              ENICARTHAGE<br>
+              Charguia 2<br>
+              Ariana<br>
+              <i class="fa fa-phone fa-lg"></i>: +216 52 62056884<br>
+                  <i class="fa fa-fax fa-lg"></i>: +216 123445666<br>
+                  <i class="fa fa-envelope fa-lg"></i>: 
+                  <a href="mailto:confusion@food.net">rchebbi@gmail.com</a>
+           </address>
+            </div>
+            <div class="col-12 col-sm-4 align-self-center">
+                <div class="text-center">
+                    <a class="btn btn-social-icon btn-google alpha21" href="http://google.com/+"><i class="fa fa-google-plus ga-lg"></i></a>
+                    <a class="btn btn-social-icon btn-facebook alpha21" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-linkedin alpha21 "href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-twitter alpha21" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-youtube alpha21" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+                    <a class="btn btn-social-icon alpha21 " href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
+                </div>
+            </div>
+       </div>
+       <div class="row justify-content-center">             
+            <div class="col-auto alpha21">
+                <p>© Copyright 2021 </p>
+            </div>
+       </div>
+    
+</footer>    
+  

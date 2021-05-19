@@ -15,7 +15,7 @@ export class AuthenService {
 
   getAdmin(): Observable<Admin[]> {
     return this.http.get<Admin[]>(this.adminUrl).pipe(
-      catchError(this.handleError<Admin[]>('getFormateurs',[]))
+      catchError(this.handleError<Admin[]>('getAdmins',[]))
     );
     
   }

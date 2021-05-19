@@ -48,8 +48,8 @@ export class StageService {
     }
     return this.http.get<Stage[]>(`${this.StageUrl}/?name=${term}`);
   }
-  countFormateurs():Observable<number>{
-    return this.http.get<number>("http://localhost:8080/countformateurs")
+  countStages():Observable<number>{
+    return this.http.get<number>("http://localhost:8080/countstages")
     
   }
 }

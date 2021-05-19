@@ -11,6 +11,7 @@ import {Router} from  '@angular/router'
 export class LoginComponent implements OnInit {
   admin:Admin={"email":"","password":""};
   admins:Admin[]=[]
+  msgErreur:string=""
   constructor( private authenService:AuthenService,
                private router :Router){
                 
@@ -25,7 +26,7 @@ export class LoginComponent implements OnInit {
       adm => {
         if (adm.email==this.admin.email && adm.password==this.admin.password){
           this.router.navigateByUrl("/dashboard")}
-        else console.log("connetion failed") }))
+        else this.msgErreur="connexion failed  check your username or password" }))
   }
   getAdmins(){
     this.authenService.getAdmin().subscribe(adm => adm.forEach(a => console.log(a.email,a.password)))

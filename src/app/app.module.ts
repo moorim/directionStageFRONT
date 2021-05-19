@@ -11,6 +11,7 @@ import { StageComponent } from './stage/stage.component';
 import { EditStageComponent } from './edit-stage/edit-stage.component';
 import { AddStageComponent } from './add-stage/add-stage.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { SocieteComponent } from './societe/societe.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     DashboardComponent,
     StageComponent,
     EditStageComponent,
-    AddStageComponent
+    AddStageComponent,
+    SocieteComponent
   ],
   imports: [
     BrowserModule,

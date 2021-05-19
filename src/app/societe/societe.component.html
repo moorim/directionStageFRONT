@@ -1,0 +1,22 @@
+<div class="table-responsive">
+    <table class="table table-striped">
+      <thead class="thead-inverse">
+        <tr>
+          <th></th>
+          <th>Societe</th>
+          <th>Addresse</th>
+          <th>Domaine</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody class="societes">
+      <tr *ngFor="let soc of societes">
+                <td>{{soc.rais_soc}}</td>
+                <td>{{soc.adresse}}</td>
+                <td>{{soc.libelle}}</td>
+                <td>{{soc.domaine}}</td>
+                <td>{{soc.type}}</td>
+
+      </tbody>
+    </table>
+  </div>
