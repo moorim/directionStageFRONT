@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+    <div id="content" class="col-6 align-self-center">
+    
+    <div *ngIf="stage">
+    
+        <h2>Edit {{stage.titre| uppercase}} </h2>
+        
+        <div class="col-auto">
+            <div class="col-auto">
+                <label for="inputname" class="form-label">titre</label>
+                <select class="form-select" [(ngModel)]="stage.titre" id="autoSizingSelect" placeholder="titre">
+                    <option value="observation">observation</option>
+                    <option value="technicien">technicien</option>
+                    <option value="PFE">PFE</option>
+                  </select>
+              </div>
+              <div class="col-auto">
+                <label for="inputname" class="form-label">Date de Debut</label>
+                <input type="date" [(ngModel)]="stage.date_debut" [ngModelOptions]="{standalone: true}" class="form-control"  placeholder="date_debut">
+              </div>
+            <div class="col-auto">
+              <label for="inputEmail4" class="form-label">Date de fin</label>
+              <input type="date" [(ngModel)]="stage.date_fin" class="form-control" placeholder="date_fin">
+            </div>
+            <div class="col-auto">
+              <label for="inputAddress" class="form-label">Encadrant</label>
+              <input type="email" [(ngModel)]="stage.encadrant" class="form-control" placeholder="encadrant">
+            </div>
+            <div class="col-auto">
+              <label class="visually-hidden" for="autoSizingSelect">Entreprise</label>
+              <input type="text" [(ngModel)]="stage.societe" class="form-control" placeholder="Entreprise">
+            </div>
+            
+            <div class="col-12">
+                <button class="btn btn-outline-danger"(click)="goBack()">go back</button>
+                <button class="btn btn-outline-success" (click)=save()>save </button>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+          <div class="row">             
+              <div  class="col-4 offset-1 col-sm-2 alpha20"> 
+                  <h5>Links</h5>
+                  <ul class="list-unstyled alpha20" >
+                      <li ><a href="#"><div class="alpha21">Home</div></a></li>
+                      <li><a href="#"><div class="alpha21">About</div></a></li>
+                      <li><a href="#"><div class="alpha21">Menu</div></a></li>
+                      <li><a href="#"><div class="alpha21">Contact</div></a></li>
+                  </ul>
+              </div>
+              <div  class="col-7 col-sm-5"> 
+    
+                  <h5><div class="alpha20">Our Address</div></h5>
+                  <address>
+                121, Clear Water Bay Road<br>
+                Clear Water Bay, Kowloon<br>
+                HONG KONG<br>
+                <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                    <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                    <i class="fa fa-envelope fa-lg"></i>: 
+                    <a href="mailto:confusion@food.net">confusion@food.net</a>
+             </address>
+              </div>
+              <div class="col-12 col-sm-4 align-self-center">
+                  <div class="text-center">
+                      <a class="btn btn-social-icon btn-google alpha21" href="http://google.com/+"><i class="fa fa-google-plus ga-lg"></i></a>
+                      <a class="btn btn-social-icon btn-facebook alpha21" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                      <a class="btn btn-social-icon btn-linkedin alpha21 "href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                      <a class="btn btn-social-icon btn-twitter alpha21" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                      <a class="btn btn-social-icon btn-youtube alpha21" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+                      <a class="btn btn-social-icon alpha21 " href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
+                  </div>
+              </div>
+         </div>
+         <div class="row justify-content-center">             
+              <div class="col-auto alpha21">
+                  <p>© Copyright 2021 </p>
+              </div>
+         </div>
+      </div>
+  </footer>    
+    

@@ -1,0 +1,128 @@
+
+body,
+html {
+  margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   background-color: #ffffffde;
+    min-height: 100%;
+ min-width: 1024px;
+ width: 100%;
+ height:100%;
+ margin: 0px;
+ top: 0;
+ left: 0
+}
+/* workaround modal-open padding issue */
+
+body.modal-open {
+  padding-right: 0 !important;
+}
+
+#sidebar {
+  padding-left: 0;
+}
+/*
+* Off Canvas at medium breakpoint
+* --------------------------------------------------
+*/
+
+@media screen and (max-width: 48em) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+  .row-offcanvas-left .sidebar-offcanvas {
+    left: -33%;
+  }
+  .row-offcanvas-left.active {
+    left: 33%;
+    margin-left: -6px;
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 33%;
+    height: 100%;
+  }
+}
+/*
+* Off Canvas wider at sm breakpoint
+* --------------------------------------------------
+*/
+
+@media screen and (max-width: 34em) {
+  .row-offcanvas-left .sidebar-offcanvas {
+    left: -45%;
+  }
+  .row-offcanvas-left.active {
+    left: 45%;
+    margin-left: -6px;
+  }
+  .sidebar-offcanvas {
+    width: 45%;
+  }
+}
+
+.card {
+  overflow: hidden;
+   border-radius: 15px 50px;
+}
+
+.card-block .rotate {
+  z-index: 8;
+  float: right;
+  height: 100%;
+}
+
+.card-block .rotate i {
+  color: rgba(63, 59, 59, 0.15);
+  position: absolute;
+  left: 0;
+  left: auto;
+  right: -10px;
+  bottom: 0;
+  display: block;
+  -webkit-transform: rotate(-44deg);
+  -moz-transform: rotate(-44deg);
+  -o-transform: rotate(-44deg);
+  -ms-transform: rotate(-44deg);
+  transform: rotate(-44deg);
+  
+}
+.alpha { background-color: rgb(114, 51, 146); 
+}
+.alpha1{
+background-color: #ae9ed3;
+}
+.alpha2{
+background-color: #f8bbd0;
+}
+.alpha3{
+background-color: #ffcc00;
+}
+.alpha20{
+color:rgb(114, 51, 146);
+}
+.alpha21{
+color:#ebe59c;
+}
+#sidebar{
+  background:  #bebac7de;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+nav{
+  background-color: rgb(114, 51, 146); 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+footer{
+  background-color: rgb(114, 51, 146);
+  margin:0px auto;
+  padding: 20px 0px 20px 0px;
+  bottom:0;
+  width:100%;
+
+
+}

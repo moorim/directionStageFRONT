@@ -1,0 +1,25 @@
+footer{
+  background-color: #5c2557;
+  margin:0px auto;
+  padding: 20px 0px 20px 0px;
+  bottom:0;
+  width:100%;
+  position: fixed;
+
+}
+.unique-color {
+  background-color: #e99fbe;
+  
+  
+}
+address{
+  font-size:80%;
+  margin:0px;
+  color:#f8bbd0;
+}
+.alpha20{
+    color:#e5df99;
+}
+.alpha21{
+    color:#f8bbd0
+}

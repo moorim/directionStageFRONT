@@ -1,0 +1,19 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <form (submit) = "login()" class="box">
+                        <h1 >Login</h1>
+                        <p class="cc"> Please enter your login and password!</p> 
+                        <input type="text" name="email" [(ngModel)]="admin.email" placeholder="E-mail"> 
+                        <input type="password" name="password" [(ngModel)]="admin.password"placeholder="Password"> 
+                        <a class="cc" href="#">Forgot password?</a> 
+                        <input type="submit" name="submit" value="Login"> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
